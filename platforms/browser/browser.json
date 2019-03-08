@@ -1,0 +1,44 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "io.cordova.hellocordova"
+    },
+    "com.telerik.plugins.nativepagetransitions": {
+      "PACKAGE_NAME": "io.cordova.hellocordova"
+    },
+    "cordova-plugin-native-transitions": {
+      "PACKAGE_NAME": "io.cordova.hellocordova"
+    }
+  },
+  "dependent_plugins": {},
+  "modules": [
+    {
+      "file": "plugins/com.telerik.plugins.nativepagetransitions/www/NativePageTransitions.js",
+      "id": "com.telerik.plugins.nativepagetransitions.NativePageTransitions",
+      "pluginId": "com.telerik.plugins.nativepagetransitions",
+      "clobbers": [
+        "window.plugins.nativepagetransitions"
+      ]
+    },
+    {
+      "file": "plugins/cordova-plugin-native-transitions/www/nativetransitions.js",
+      "id": "cordova-plugin-native-transitions.NativeTransitions",
+      "pluginId": "cordova-plugin-native-transitions",
+      "clobbers": [
+        "nativetransitions"
+      ]
+    }
+  ],
+  "plugin_metadata": {
+    "cordova-plugin-whitelist": "1.3.3",
+    "com.telerik.plugins.nativepagetransitions": "0.6.5",
+    "cordova-plugin-native-transitions": "0.2.3"
+  }
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    
+    <!--
+
+
+    -->
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Laila|ZCOOL+QingKe+HuangYou" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js" ></script>
+    <title>Patologia Bucal App</title>
+</head>
+<body>
+  <div id="Tela_menu" class="page">
+    <div class="pos-f-t"> 
+      <nav class="navbar navbar-dark bg-primary">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Alterna navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <strong>
+          <img src="img/cabecalho.png" class="cabecalho">
+        </strong>
+        <section data-role="content">
+          <a class="navbar-brand" onclick ="callAnothePage('index.html')" data-transition='fade' data-role='button' >   
+          </a>
+        </section>
+      </nav>
+      <div class="collapse navMenu" id="navbarToggleExternalContent">
+        <div class="bg-white p-4">
+            <ul class="navbar-nav">
+                <li class="nav-item ">
+                  <a class="nav-link" onclick ="callAnothePage('paginaInicial.html')">
+                     <img src="img/Bt_inicio.png" id="btInicio">   
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" onclick ="callAnothePage('telaCreditos.html')">
+                     <img src="img/Bt_info.png" id="btInfo">
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" onclick ="exitFromApp()">
+                     <img src="img/Bt_sair.png" id="btSair">
+                  </a>
+                </li>
+            </ul>
+        </div>
+      </div>
+      <div class="divMenu" style="top: 18%; left:5%; width: 90%;"> 
+          <form >
+            <div class="form-group">
+                <h5>Contato</h5>
+            </div>
+            <div class="form-group">
+              <label for="idEmail">Endereço de e-mail</label>
+              <input type="email" class="form-control" id="idEmail" size="10" name="email" placeholder="nome@exemplo.com">
+            </div>
+            <div class="form-group">
+              <label for="idAssunto">Assunto do e-mail</label>
+              <input type="text" class="form-control" id="idAssunto" name="assunto"placeholder="ex.: Sugestão">
+            </div>
+            <div class="form-group">
+               <label for="idMensagem">Mensagem</label>
+               <textarea class="form-control" id="idMensagem" rows="3"></textarea>
+             </div>
+             <div class="form-group">
+                <a onclick ="" class="btn btn-primary mt-2 text-white" 
+                    style=" position: relative;
+                    left: 38%; right:40%;">Enviar</a> 
+              </div>
+          </form> 
+      </div>
+    </div>
+  </div>
+</body>
+
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+</html>
