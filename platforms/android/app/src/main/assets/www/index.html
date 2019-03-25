@@ -19,10 +19,10 @@
     <script type="text/javascript" src="js/popper.min.js" ></script>
     <script language= "JavaScript">     
         if(window.localStorage.getItem("nomeUser") == "" || window.localStorage.getItem("nomeUser") == null){
-            setTimeout("document.location = 'paginaUsuario.html'",3000);
+           setTimeout("document.location = 'paginaUsuario.html'",3000);
         }else
         {
-            setTimeout("document.location = 'paginaInicial.html'",3000);
+           setTimeout("document.location = 'paginaInicial.html'",3000);
         }
     </script>
     <platform name="android">
@@ -45,15 +45,20 @@
     </head>
 
     <body>
+
       <div id="Tela_Login" class="page">
         <img src="img/logo.png" class="imgLogo">
         <h3  class="text-white"  style=" position: absolute;
-                    top: 60%;
+                    top: 40%;
                     left: 45%;">
-                    <strong>. . .</strong> </h3>
+      </div>
+      <div id="divLoading">
+            <img src="img/carregando.svg" class="loading" style=" position: absolute;
+               top: 30%;
+               left: 50%;"> 
       </div>
     </body>
-
+<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script> 
 <script type="text/javascript" src="cordova.js"></script>

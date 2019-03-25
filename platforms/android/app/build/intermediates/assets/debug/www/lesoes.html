@@ -24,9 +24,15 @@
 <body>
   <div id="Tela_menu" class="page">
     <div class="pos-f-t"> 
+      <div id="divLoading">
+          <img src="img/loading.gif" class="loading"> 
+      </div>
        <nav class="navbar navbar-dark bg-primary">
-       <strong>
-        <img src="img/cabecalho.png" class="cabecalho">
+        <a data-toggle="collapse" data-target="#idDivBusca"  aria-expanded="false"  class="button" aria-controls="idDivBusca" style=" background-color: rgba(0,0,0,0) !important; background-color: rgba(0,0,0,0) !important; border" >
+          <img src="img/lupa.png" class="btLupa"> 
+        </a>
+        <strong>
+          <img src="img/cabecalho.png" class="cabecalho">
         </strong>
         <section data-role="content">
           <a class="navbar-brand" onclick ="callAnothePage('paginaInicial.html')" data-transition='fade' data-role='button' >
@@ -36,37 +42,23 @@
       </nav>
       <div class="container mt-3" style=" text-align: center;">
           <h5  >Lesões</h5>
-          <div class="input-group mb-3"   style="align-items: center;justify-content: center;" >
-            <input type="text" class="form-control" placeholder="Buscar lesão" aria-label="Recipient's username" aria-describedby="bt_buscar_lesao">
+          <div class="input-group mb-3 collapse" id="idDivBusca" style="align-items: center;justify-content: center;" >
+            <input type="text" class="form-control" placeholder="Buscar lesão" aria-label="Recipient's username" aria-describedby="bt_buscar_lesao" id="idBucar">
             <div class="input-group-append">
               <button class="btn btn-outline-secondary" type="button"  onclick =""  id="bt_buscar_lesao">Buscar</button>
             </div>
           </div>
       </div>
-      <div class="list-group" style=" text-align: center; position: absolute;   left:2%; width: 95%;">
-        <button type="button" class="list-group-item list-group-item-action mb-1 btLista" 
-        onclick ="callAnothePage('paginaInicial.html')" >Ameloblastoma</button>
-        <button type="button" class="list-group-item list-group-item-action mb-1 btLista" 
-         onclick ="callAnothePage('paginaInicial.html')" >Cisto dentígero</button>
-        <button type="button" class="list-group-item list-group-item-action mb-1 btLista"
-         onclick ="callAnothePage('paginaInicial.html')" >Cisto de ducto nasoplastino</button>
-        <button type="button" class="list-group-item list-group-item-action mb-1 btLista" 
-        onclick ="callAnothePage('paginaInicial.html')" >Cisto de erupção</button>
-        <button type="button" class="list-group-item list-group-item-action mb-1 btLista" 
-        onclick ="callAnothePage('paginaInicial.html')" >Fibroma ossificante</button>
-         <button type="button" class="list-group-item list-group-item-action mb-1 btLista" 
-        onclick ="callAnothePage('paginaInicial.html')" >Granuloma piogênico</button>
-         <button type="button" class="list-group-item list-group-item-action mb-1 btLista" 
-        onclick ="callAnothePage('paginaInicial.html')" >Linfangioma</button>
-         <button type="button" class="list-group-item list-group-item-action mb-1 btLista" 
-        onclick ="callAnothePage('paginaInicial.html')" >Lipoma</button>
-         <button type="button" class="list-group-item list-group-item-action mb-1 btLista" 
-        onclick ="callAnothePage('paginaInicial.html')" >Papiloma Escamoso</button>
+      <div class="list-group" style=" text-align: center; position: absolute;   left:2%; width: 95%;" id="divLesoes">
       </div>
     </div>
   </div>
 </body>
-
+<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script> 
 <script type="text/javascript" src="cordova.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
+
+
 </html>
