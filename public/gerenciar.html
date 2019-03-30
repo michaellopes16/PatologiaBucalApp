@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    
+    <!--
+     <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    -->
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Laila|ZCOOL+QingKe+HuangYou" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js" ></script>
+    <title>Patologia Bucal App</title>
+</head>
+<body>
+  <div id="Tela_menu" class="page">
+    <div class="pos-f-t"> 
+       <nav class="navbar navbar-dark bg-primary">
+        <strong>
+          <img src="img/cabecalho.png" class="cabecalho">
+        </strong>
+        <section data-role="content">
+          <a class="navbar-brand" onclick ="callAnothePage('paginaInicial.html')" data-transition='fade' data-role='button' >
+             <img src="img/Bt_voltar.png" class="btVoltar"> 
+          </a>
+        </section>
+      </nav>
+      <div class="container mt-3" style=" text-align: center;">
+          <h5  >Cadastrar Lesões</h5>
+          <div class="input-group mb-3" id="idDivBusca" style="align-items: center;justify-content: center;  " >
+            <form style="width: 70%; height: 100%;">
+              <div class="form-row" size="20" >
+                <div class="col-md-12">
+                  <label class="mt-3"for="idNome"><strong>Nome da lesão</strong></label>
+                  <input type="text" class="form-control mt-3" id="idNome" >
+                </div>
+              </div>
+              <div class="form-row ">
+                 <div class="col-md-12 ">
+                   <label class="mt-3"for="idDescricao"> <strong>Descrição</strong></label>
+                   <textarea class="form-control" id="idDescricao" rows="15" size="20" style="resize: none" ></textarea>
+                 </div>
+               </div>
+               <div class="form-row ">
+                  <div class="col-md-12 ">
+                    <label class="mt-3"for="idClinico"><strong>Caso Clínico</strong></label>
+                    <textarea class="form-control" id="idClinico" rows="15" size="40" style="resize: none"></textarea>
+                  </div>
+                  <div class="form-group mt-2" style="text-align: start;" >
+                      <label class="" for="upImagemClinica">Imagem Clínica</label>
+                      <input type="file" class="form-control-file" id="upImagemClinica">
+                      <progress value="0" max="100" id="uploader1">0%</progress>
+                  </div>
+                </div>
+                <div class="form-row ">
+                   <div class="col-md-12 ">
+                     <label class="mt-3"for="idHistologico"><strong>Histológico</strong></label>
+                     <textarea class="form-control" id="idHistologico" rows="15" size="20" style="resize: none"></textarea>
+                   </div>
+                   <div class="form-group mt-2" style="text-align: start;" >
+                       <label class="" for="upImagemHisto">Imagem Histológico</label>
+                       <input type="file" class="form-control-file" id="upImagemHisto">
+                       <progress value="0" max="100" id="uploader2">0%</progress>
+                   </div>
+                </div>
+                <div class="form-row ">
+                   <div class="col-md-12 " style="align-items: start;justify-content: start;">
+                     <label class="mt-3"for="idRadiologico" ><strong>Radiológico</strong></label>
+                     <textarea class="form-control" id="idRadiologico" rows="15" size="20" style="resize: none"></textarea>
+                     
+                     <div class="form-group mt-2" style="text-align: start;" >
+                         <label class="" for="upImagemRadio">Imagem Radiologica</label>
+                         <input type="file" class="form-control-file" id="upImagemRadio">
+                         <progress value="0" max="100" id="uploader3">0%</progress>
+                     </div>
+                   </div>
+                 </div>
+                 <div class="form-row ">
+                    <div class="col-md-12 ">
+                      <label class="mt-3"for="idDiagnostico"><strong>Diagnótico</strong></label>
+                      <textarea class="form-control" id="idDiagnostico" rows="15" size="20" style="resize: none"></textarea>
+                    </div>
+                 </div>
+                 <div class="form-row ">
+                    <div class="col-md-12 ">
+                      <label class="mt-3"for="idTratamento"><strong>Tratamento</strong></label>
+                      <textarea class="form-control" id="idTratamento" rows="7" size="20" style="resize: none"></textarea>
+                    </div>
+                  </div>
+                  <div class="form-row ">
+                    <div class="col-md-12 ">
+                      <button class="btn btn-primary mt-3" type="button" id="bt_salvar_lesao">Salvar</button>
+                    </div>
+                  </div>
+            </form>
+          </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script> 
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+
+
+</html>
